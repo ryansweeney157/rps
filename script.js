@@ -12,7 +12,12 @@ document.querySelectorAll('.choice').forEach(button => {
         document.getElementById('opponent-choice').textContent = `Computer's Choice: ${computerChoice}`;
         document.getElementById('end-result').textContent = `Winner: ${winner}`;
 
-        score(winner);
+        
+
+    document.getElementById('user-score').textContent = `Your score: ${userScore}`;
+    document.getElementById('opponent-score').textContent = `Opponent score: ${computerScore}`;
+
+        score(winner)
     });
 
 });
@@ -27,20 +32,10 @@ function getWinner(userChoice, computerChoice) {
        (userChoice === 'paper' && computerChoice === 'rock') ||
        (userChoice === 'scissors' &&computerChoice === 'paper')
     ) {
+        userScore++
         return 'You';
     } else {
+        computerScore++
         return 'Computer';
     }
-}
-
-function score(winner) {
-    if (winner === 'You') {
-        userScore++;
-    }
-    else if (winner === 'Computer') {
-        computerScore++;
-    }
-
-    document.getElementById('user-score').textContent = `Your score: ${userScore}`;
-    document.getElementById('opponent-score').textContent = `Opponent score: ${computerScore}`;
 }
