@@ -11,6 +11,8 @@ document.querySelectorAll('.choice').forEach(button => {
         document.getElementById('user-choice').textContent = `Your choice: ${userChoice}`;
         document.getElementById('opponent-choice').textContent = `Computer's Choice: ${computerChoice}`;
         document.getElementById('end-result').textContent = `Winner: ${winner}`;
+
+        score(winner);
     });
 
 });
@@ -39,10 +41,6 @@ function score(winner) {
         computerScore++;
     }
 
-    else {
-        computerScore++;
-        userScore++;
-    }
     document.getElementById('user-score').textContent = `Your score: ${userScore}`;
     document.getElementById('opponent-score').textContent = `Opponent score: ${computerScore}`;
 }
