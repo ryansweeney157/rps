@@ -12,3 +12,19 @@ document.querySelectorAll('.choice').forEach(button => {
     });
 
 });
+
+
+function getWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return 'tie!';
+    }
+    else if (
+       (userChoice === 'rock' && computerChoice === 'scissors') ||
+       (userChoice === 'paper' && computerChoice === 'rock') ||
+       (userChoice === 'scissors' &&computerChoice === 'paper')
+    ) {
+        return 'You';
+    } else {
+        return 'Computer';
+    }
+}
