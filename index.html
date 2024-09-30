@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="rps/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Rock paper scissors</title>
 </head>
 <body>
-    <h1>Gang</h1>
+    <h1>Play rock paper scissors against a computer opponent!</h1>
+
+    <div class="container">
+        <div class="rps">
+            <button class="choice" id="rock">Rock</button>
+            <button class="choice"id="paper">Paper</button>
+            <button class="choice" id="scissors">Scissors</button>
+        </div>
+        <div class="end-result">
+            <h3 id="user-choice">Your Choice: </h3>
+            <h3 id="opponent-choice">Opponent's Choice: </h3>
+            <h3 id="end-result">Winner: </h3>
+        </div>
+        <div class="scoreboard">
+            <p id="user-score">Your score: 0</p>
+            <p id="opponent-score">Computer's score: 0</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
